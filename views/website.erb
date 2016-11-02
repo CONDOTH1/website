@@ -4,22 +4,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="jquery-3.1.0.js" type="text/javascript"></script>
-  <script src="website.js" type="text/javascript"></script>
   <script src="website_jquery.js" type="text/javascript"></script>
   <link rel="stylesheet" href="style.css">
-  <script src="about.html" type="html"></script>
+  <script src="./lib/about.html" type="html"></script>
   <title>Thady Condon</title>
 </head>
 <body>
   <ul>
-    <li><a href="/">Home</a></li>
+    <li><a id='home'>Home</a></li>
     <li><a id='news'>News</a></li>
     <li><a id='contact'>Contact</a></li>
     <li><a id='about'>About</a></li>
   </ul>
   <div id='titleName' class='center'>Thady Condon<span>|</span></div>
-  <div id='aboutTextBox' style="position:relative;top:75%;left:-48%"></div>
-  <div id='contactTextBox' style="position:relative;top:76%;left:-48%"></div>
+  <div id='aboutTextBox'></div>
+  <div id='contactTextBox'></div>
+  <script src="./lib/contactBox.js" type="text/javascript"></script>
+  <script src="./lib/aboutBox.js" type="text/javascript"></script>
 
   <!-- <p style="position:absolute">This is a paragraph.</p> -->
 </body>

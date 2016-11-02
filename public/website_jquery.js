@@ -1,34 +1,50 @@
 $(document).ready(function(){
+
+  var openBoxes = {contact: false, about: false};
+
+  $('#home').click(function(){
+    closeBoxes();
+  });
+
   $('#about').click(function(){
-    aboutTextBox();
-    loadAboutText();
+    if (openBoxes.about === false) {
+      var element = closeBoxes();
+      $.when(element).then(function() {
+        AboutBox.animateForward();
+      });
+      openBoxes.about = true;
+    }
   });
 
   $('#contact').click(function(){
-    $("#contactTextBox").animate({left: "-45%"}, 1000)
-    .animate({top: "5%"}, 2000)
-    .animate({left: "0%"}, 2000)
-    .animate({width: 400}, 1000)
-    .animate({height: 200}, 400)
-    .animate({padding: "+=30px"})
-    .animate({borderWidth: 5}, "slow");
+    if (openBoxes.contact === false) {
+      var element = closeBoxes();
+      $.when(element).then(function() {
+        ContactBox.animateForward();
+      });
+      openBoxes.contact = true;
+    }
   });
+
+  function closeBoxes() {
+    for (var key in openBoxes) {
+      if (openBoxes[key] === true) {
+        if (key == "contact") {
+          ContactBox.animateReverse();
+          openBoxes.contact = false;
+          return $('#contactTextBox');
+        } else if (key === "about") {
+          AboutBox.animateReverse();
+          openBoxes.about = false;
+          return $('#aboutTextBox');
+        }
+      }
+    }
+  }
 
   $('#news').click(function(){
-    Website.contactOpen();
+    console.log(ContactBox.open(width));
   });
 
-  function aboutTextBox(){
-    console.log($("#aboutTextBox").parent().height());
-    $("#aboutTextBox").animate({top: "5%"}, 2000)
-    .animate({left: "0%"}, 2000)
-    .animate({width: 800}, 1000)
-    .animate({height: 800}, 400)
-    .animate({padding: "+=30px"})
-    .animate({borderWidth: 5}, "slow");
-  }
 
-  function loadAboutText(){
-    $("#aboutTextBox").load("about.html");
-  }
 });
