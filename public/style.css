@@ -55,11 +55,11 @@ body{
 }
 
 #aboutTextBox{
-  /*display: inline-block;*/
+  display: inline-block;
   position:fixed;
   overflow-y:scroll;
   left:1%;
-  top:92%;
+  top:91%;
   width: 20px;
   height: 20px;
   margin: auto;
