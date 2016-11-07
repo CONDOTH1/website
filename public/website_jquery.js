@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  var boxes = {contact: ContactBox, about: AboutBox, photo: PhotoBox};
+  var boxes = {contact: ContactBox, about: AboutBox, photo: PhotoBox, blog: BlogBox};
 
   $('#home').click(function(){
     openBox(boxes.photo);
@@ -13,6 +13,10 @@ $(document).ready(function(){
   $('#contact').click(function(){
     openBox(boxes.contact);
   });
+
+  $('#news').click(function(){
+    openBox(boxes.blog);
+    });
 
   function openBox(box) {
     if (box.status() === false) {
@@ -32,9 +36,5 @@ $(document).ready(function(){
       }
     }
   }
-
-  $('#news').click(function(){
-  });
-
 
 });

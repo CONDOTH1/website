@@ -11,6 +11,7 @@ li {
 }
 
 li a {
+    cursor: pointer;
     display: block;
     color: white;
     text-align: center;
@@ -20,6 +21,7 @@ li a {
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
+    cursor: pointer;
     background-color: #111;
 }
 
@@ -48,43 +50,27 @@ body{
   margin: auto;
 }*/
 
-#aboutText{
-  color: white;
+.movingBox{
+  position:fixed;
+  overflow-y:scroll;
+  margin: auto;
+  left:1%;
+  width: 20px;
+  height: 20px;
+  background: #b3c8d0;
+  border: 1px solid white;
+  font-size: 10pt;
+  color: black;
   text-decoration: none;
   font-family: "Courier";
 }
 
 #aboutTextBox{
-  display: inline-block;
-  position:fixed;
-  overflow-y:scroll;
-  left:1%;
-  top:91%;
-  width: 20px;
-  height: 20px;
-  margin: auto;
-  background: #b3c8d0;
-  border: 1px solid white;
-  font-size: 10pt;
-  color: black;
-  text-decoration: none;
-  font-family: "Courier";
+  top:95%;
 }
 
 #contactTextBox{
-  position:fixed;
-  overflow-y:scroll;
-  left:1%;
-  top:95%;
-  width: 20px;
-  height: 20px;
-  margin: auto;
-  background: #b3c8d0;
-  border: 1px solid white;
-  font-size: 10pt;
-  color: black;
-  text-decoration: none;
-  font-family: "Courier";
+  top:91%;
 }
 
 #photoDiv{
@@ -95,6 +81,10 @@ body{
   width: 220px;
   height: 220px;
   border: 5px solid white;
+}
+
+#blogTextBox{
+  top:87%;
 }
 
 img{
