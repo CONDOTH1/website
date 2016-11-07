@@ -87,8 +87,19 @@ body{
   font-family: "Courier";
 }
 
+#photoDiv{
+  position: fixed;
+  background: #b3c8d0;
+  top: 30%;
+  left: 40%;
+  width: 220px;
+  height: 220px;
+  border: 5px solid white;
+}
+
 img{
   position:fixed;
+  z-index: 1;
   top: 30%;
   left: 40%;
   width: 220px;
@@ -123,24 +134,3 @@ span{
 ::selection{
   background: black;
 }
-
-/*.typewriter h1 {
-  overflow: hidden;
-  border-right: .15em solid orange;
-  white-space: nowrap;
-  margin: auto;
-  letter-spacing: .15em;
-  animation:
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-}
-
-@keyframes typing {
-  from {width:0 }
-  to {width: 100%}
-}
-
-@keyframes blink-caret {
-from, to {border-color: transparent}
-50% {border-color: orange;}
-}*/

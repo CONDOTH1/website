@@ -1,9 +1,12 @@
 $(document).ready(function(){
 
-  var openBoxes = {contact: false, about: false};
+  var openBoxes = {contact: false, about: false, photo: true};
 
   $('#home').click(function(){
-    closeBoxes();
+    var element = closeBoxes();
+    $.when(element).then(function() {
+      PhotoBox.animateForward();
+    });
   });
 
   $('#about').click(function(){
@@ -37,13 +40,15 @@ $(document).ready(function(){
           AboutBox.animateReverse();
           openBoxes.about = false;
           return $('#aboutTextBox');
-        }
+        } else if (key === "photo")
+          PhotoBox.animateReverse();
+          openBoxes.photo = false;
+          return $('#photoFrame');
       }
     }
   }
 
   $('#news').click(function(){
-    console.log(ContactBox.open(width));
   });
 
 
