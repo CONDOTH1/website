@@ -19,9 +19,10 @@ var ContactBox = (function () {
     },
 
     animateForward: function() {
-      $("#contactTextBox").animate({right: "92%"}, 500)
-      .animate({top: "20%"}, 1000)
-      .animate({right: "0%"}, 1000)
+      console.log('testcontact');
+      $("#contactTextBox").animate({right: "92%"}, 200)
+      .animate({top: "20%"}, 500)
+      .animate({right: "0%"}, 500)
       .animate({width: 400}, 500)
       .animate({height: 200}, 400)
       .animate({padding: "+=30px"})
@@ -32,13 +33,14 @@ var ContactBox = (function () {
 
     animateReverse: function() {
       if (isOpen) {
+        console.log('testcontact');
         $("#contactTextBox").animate({borderWidth: 1}, "slow")
         .animate({padding: 0})
         .animate({height: 20}, 400)
         .animate({width: 20}, 500)
-        .animate({right: "92%"}, 1000)
-        .animate({top: "91%"}, 1000)
-        .animate({right: "99%"}, 500);
+        .animate({right: "92%"}, 500)
+        .animate({top: "91%"}, 500)
+        .animate({right: "99%"}, 200);
         isOpen = false;
       }
     }

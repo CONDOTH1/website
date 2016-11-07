@@ -23,9 +23,10 @@ var AboutBox = (function () {
     },
 
     animateForward: function() {
-      $("#aboutTextBox").animate({right: "92%"}, 500)
-      .animate({top: "18%"}, 1000)
-      .animate({right: "0%"}, 1000)
+      console.log("test1");
+      $("#aboutTextBox").animate({right: "92%"}, 200)
+      .animate({top: "18%"}, 500)
+      .animate({right: "0%"}, 500)
       .animate({width: 800}, 500)
       .animate({height: 500}, 200)
       .animate({padding: "+=30px"})
@@ -42,9 +43,9 @@ var AboutBox = (function () {
         .animate({padding: 0})
         .animate({height: 20}, 200)
         .animate({width: 20}, 500)
-        .animate({right: "92%"}, 1000)
-        .animate({top: "95%"}, 1000)
-        .animate({right: "99%"}, 500);
+        .animate({right: "92%"}, 500)
+        .animate({top: "95%"}, 500)
+        .animate({right: "99%"}, 200);
         unloadAboutText();
         isOpen = false;
       }

@@ -15,8 +15,8 @@ var PhotoBox = (function () {
 
     animateForward: function() {
       $("#photoFrame").css('z-index', 1);
-      $("#photoFrame, #photoDiv").animate({top:"30%"}, 1000)
-      .animate({left:"40%"}, 1000)
+      $("#photoFrame, #photoDiv").animate({top:"30%"}, 500)
+      .animate({left:"40%"}, 500)
       .animate({width:220, height:220}, 500)
       .animate({padding: 0})
       .animate({borderWidth: 5}, "slow");
@@ -28,8 +28,8 @@ var PhotoBox = (function () {
         $("#photoFrame, #photoDiv").animate({borderWidth: 1}, "slow")
         .animate({padding: 0})
         .animate({height: 20, width:20}, 500)
-        .animate({left: "1%"}, 1000)
-        .animate({top: "83%"}, 1000);
+        .animate({left: "1%"}, 500)
+        .animate({top: "83%"}, 500);
         $("#photoFrame").css('z-index', -1);
         isOpen = false;
       }
