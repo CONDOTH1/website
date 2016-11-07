@@ -1,49 +1,34 @@
 $(document).ready(function(){
 
-  var openBoxes = {contact: false, about: false, photo: true};
+  var boxes = {contact: ContactBox, about: AboutBox, photo: PhotoBox};
 
   $('#home').click(function(){
-    var element = closeBoxes();
-    $.when(element).then(function() {
-      PhotoBox.animateForward();
-    });
+    openBox(boxes.photo);
   });
 
   $('#about').click(function(){
-    if (openBoxes.about === false) {
-      var element = closeBoxes();
-      $.when(element).then(function() {
-        AboutBox.animateForward();
-      });
-      openBoxes.about = true;
-    }
+    openBox(boxes.about);
   });
 
   $('#contact').click(function(){
-    if (openBoxes.contact === false) {
-      var element = closeBoxes();
-      $.when(element).then(function() {
-        ContactBox.animateForward();
-      });
-      openBoxes.contact = true;
-    }
+    openBox(boxes.contact);
   });
 
+  function openBox(box) {
+    if (box.status() === false) {
+      var element = closeBoxes();
+      console.log(element);
+      $.when(element).then(function() {
+        box.animateForward();
+      });
+    }
+  }
+
   function closeBoxes() {
-    for (var key in openBoxes) {
-      if (openBoxes[key] === true) {
-        if (key == "contact") {
-          ContactBox.animateReverse();
-          openBoxes.contact = false;
-          return $('#contactTextBox');
-        } else if (key === "about") {
-          AboutBox.animateReverse();
-          openBoxes.about = false;
-          return $('#aboutTextBox');
-        } else if (key === "photo")
-          PhotoBox.animateReverse();
-          openBoxes.photo = false;
-          return $('#photoFrame');
+    for (var key in boxes) {
+      if (boxes[key].status() === true) {
+        boxes[key].animateReverse();
+        return boxes[key].element();
       }
     }
   }

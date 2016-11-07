@@ -1,10 +1,21 @@
 var ContactBox = (function () {
 
+  var isOpen = false;
+  var div = $('#contactTextBox');
+
   function loadContactText(){
     $("#contactTextBox").load("./lib/contact.html");
   }
 
   return {
+
+    status: function() {
+      return isOpen;
+    },
+
+    element: function() {
+      return div;
+    },
 
     animateForward: function() {
       $("#contactTextBox").animate({right: "92%"}, 500)
@@ -15,16 +26,20 @@ var ContactBox = (function () {
       .animate({padding: "+=30px"})
       .animate({borderWidth: 5}, "slow");
       loadContactText();
+      isOpen = true;
     },
 
     animateReverse: function() {
-      $("#contactTextBox").animate({borderWidth: 1}, "slow")
-      .animate({padding: 0})
-      .animate({height: 20}, 400)
-      .animate({width: 20}, 500)
-      .animate({right: "92%"}, 1000)
-      .animate({top: "95%"}, 1000)
-      .animate({right: "99%"}, 500);
+      if (isOpen) {
+        $("#contactTextBox").animate({borderWidth: 1}, "slow")
+        .animate({padding: 0})
+        .animate({height: 20}, 400)
+        .animate({width: 20}, 500)
+        .animate({right: "92%"}, 1000)
+        .animate({top: "95%"}, 1000)
+        .animate({right: "99%"}, 500);
+        isOpen = false;
+      }
     }
 };
 })();
