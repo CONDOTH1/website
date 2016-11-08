@@ -83,7 +83,11 @@ body{
   border: 5px solid white;
 }
 
-#blogTextBox{
+#triviaMovies{
+  top:87%;
+}
+
+#triviaSport{
   top:87%;
 }
 

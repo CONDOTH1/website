@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  var boxes = {contact: ContactBox, about: AboutBox, photo: PhotoBox, blog: BlogBox};
+  var boxes = {contact: ContactBox, about: AboutBox, photo: PhotoBox, trivia: TriviaBox};
 
   $('#home').click(function(){
     openBox(boxes.photo);
@@ -14,14 +14,23 @@ $(document).ready(function(){
     openBox(boxes.contact);
   });
 
-  $('#news').click(function(){
-    openBox(boxes.blog);
+  $('#trivia').click(function(){
+    openBox(boxes.trivia);
     });
+  //
+  $(document).delegate('#sports', 'click', function(){
+    boxes.trivia.animateTall($('#triviaSport'));
+    boxes.trivia.setSportsOpen();
+  });
+
+  $(document).delegate('#movies', 'click', function(){
+    boxes.trivia.animateTall($('#triviaMovies'));
+    boxes.trivia.setMoviesOpen();
+  });
 
   function openBox(box) {
     if (box.status() === false) {
       var element = closeBoxes();
-      console.log(element);
       $.when(element).then(function() {
         box.animateForward();
       });
