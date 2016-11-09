@@ -5,8 +5,11 @@ var TriviaBox = (function () {
   var moviesIsOpen = false;
   var movieDiv = $('#triviaMovies');
   var sportDiv = $('#triviaSport');
-  var movieAnchor = "<a id='movies'>Movies</a>";
-  var sportAnchor = "<a id='sports'>Sports</a>";
+  // var movieAnchor = "<a id='movies'>Movies</a>";
+  // var sportAnchor = "<a id='sports'>Sports</a>";
+  var movieAnchor = "<li><a id='movies' style='float:right;'>Movies</a></li>";
+  var sportAnchor = "<li><a id='sports'>Sports</a></li>";
+
   var boxStatus = [sportsIsOpen, moviesIsOpen];
   var triviaDivs = [sportDiv, movieDiv];
   var triviaPos = ["14%", "0%"];
@@ -16,9 +19,10 @@ var TriviaBox = (function () {
   }
 
   function reverseShort(element, delay) {
-    element.animate({height: 20}, 500).delay(delay)
-    .animate({width: 20}, 500)
-    .animate({right: "92%"}, 500)
+    element.animate({right: "92%"}, 500).delay(delay)
+    // .animate({height: 20}, 500).delay(delay)
+    // .animate({width: 20}, 500)
+    // .animate({right: "92%"}, 500)
     .animate({top: "87%"}, 500)
     .animate({right: "99%"}, 200);
     element.empty();
@@ -27,9 +31,11 @@ var TriviaBox = (function () {
   function forwardShort(element, delay, position, anchor){
     element.animate({right: "92%"}, 500).delay(delay)
     .animate({top: "20%"}, 500)
-    .animate({right: position}, 500)
-    .animate({width: 50, height: 20}, 500);
-    element.append(anchor);
+    .animate({right: position}, 500);
+    // .animate({width: 20, height: 20}, 500);
+    $.when(element).then(function() {
+      $('#menu').append(anchor);
+    });
   }
 
   function forwardTall(element){
@@ -44,7 +50,7 @@ var TriviaBox = (function () {
 function reverseTall(element, position){
       element.animate({borderWidth: 1}, "slow")
         .animate({padding: 0})
-        .animate({width: 50, height: 20}, 500)
+        .animate({width: 20, height: 20}, 500)
         .animate({right: position}, 200)
         .animate({top: "20%"});
     }
@@ -68,12 +74,11 @@ function closeTall() {
     },
 
     element: function() {
-      return movieDiv;
+      return $('#triviaSport, #triviaMovies');
     },
 
     setSportsOpen: function() {
       boxStatus[0] = true;
-      console.log("2. sports:" + sportsIsOpen);
     },
 
     setMoviesOpen: function() {
@@ -82,12 +87,19 @@ function closeTall() {
 
     animateReverse: function() {
       if (isOpen) {
-        var closeElement = closeTall();
-        $.when(closeElement).then(function() {
+        // var closeElement = closeTall();
+        closeTall();
+        // $.when(movieDiv).done(function() {
+        // closeElement.queue(function() {
+        // console.log(closeElement);
           reverseShort(sportDiv, 0);
-          reverseShort(movieDiv, 1000);
+          reverseShort(movieDiv, 0);
           isOpen = false;
-        });
+        // });
+          // reverseShort(sportDiv, 0);
+          // reverseShort(movieDiv, 1000);
+          // isOpen = false;
+        // });
       }
     },
 

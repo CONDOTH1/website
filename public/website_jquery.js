@@ -31,6 +31,10 @@ $(document).ready(function(){
   function openBox(box) {
     if (box.status() === false) {
       var element = closeBoxes();
+      // element.queue(function() {
+      //   box.animateForward();
+      //
+      // })
       $.when(element).then(function() {
         box.animateForward();
       });
