@@ -5,10 +5,10 @@ var TriviaBox = (function () {
   var moviesIsOpen = false;
   var movieDiv = $('#triviaMovies');
   var sportDiv = $('#triviaSport');
-  // var movieAnchor = "<a id='movies'>Movies</a>";
-  // var sportAnchor = "<a id='sports'>Sports</a>";
-  // var movieAnchor = "<li><a id='movies' style='float:right;'>Movies</a></li>";
-  // var sportAnchor = "<li><a id='sports'>Sports</a></li>";
+  var movieAnchor = "<a id='movies'>Movies</a>";
+  var sportAnchor = "<a id='sports'>Sports</a>";
+  var movieAnchor = "<li><a id='movies' style='float:right;'>Movies</a></li>";
+  var sportAnchor = "<li><a id='sports'>Sports</a></li>";
 
   var boxStatus = [sportsIsOpen, moviesIsOpen];
   var triviaDivs = [sportDiv, movieDiv];
@@ -18,15 +18,15 @@ var TriviaBox = (function () {
     $("#triviaTextBox").load("./lib/trivia.html");
   }
 
-  // function reverseShort(element, delay) {
-  //   element.animate({right: "92%"}, 500).delay(delay)
-  //   // .animate({height: 20}, 500).delay(delay)
-  //   // .animate({width: 20}, 500)
-  //   // .animate({right: "92%"}, 500)
-  //   .animate({top: "87%"}, 500)
-  //   .animate({right: "99%"}, 200);
-  //   element.empty();
-  // }
+  function reverseShort(element, delay) {
+    element.animate({right: "92%"}, 500).delay(delay)
+    // .animate({height: 20}, 500).delay(delay)
+    // .animate({width: 20}, 500)
+    // .animate({right: "92%"}, 500)
+    .animate({top: "87%"}, 500)
+    .animate({right: "99%"}, 200);
+    element.empty();
+  }
 
   // function forwardShort(element, delay, position, anchor){
   //   element.animate({right: "92%"}, 500).delay(delay)
