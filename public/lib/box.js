@@ -1,15 +1,16 @@
 var Box = (function () {
 
   function loadAboutText(element, textBox){
-    element.load(textBox);
+    element.contents().fadeIn("slow");
+    // element.fadeIn(textBox);
   }
 
   function unloadAboutText(element){
-    element.empty();
+    $("#quote").fadeOut("slow");
+    element.contents().fadeOut("slow");
   }
 
   return {
-
 
     status: function(box) {
       return openBoxes[box];
