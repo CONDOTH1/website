@@ -9,9 +9,9 @@ $(document).ready(function(){
   var boxPosition = {home: "83%", about: "95%", contact: "91%", sports: "87%", movies: "87%"};
 
   var homePositions = {width: 220, height: 220, padding: "+=0"};
-  var aboutPositions = {width: 800, height: 500, padding: "+=30"};
+  var aboutPositions = {width: 900, height: 490, padding: "+=30"};
   var contactPositions = {width: 400, height: 200, padding: "+=30"};
-  var triviaPositions = {width: 800, height: 500, padding: "+=30"};
+  var triviaPositions = {width: 900, height: 490, padding: "+=30"};
 
   websiteStartAnimation();
 
