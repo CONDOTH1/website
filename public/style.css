@@ -165,15 +165,14 @@ body{
   animation: blink2 4s  steps(40, start);
 }
 
-.fade {
+.loadFade {
    opacity: 1;
    transition: opacity .25s ease-in-out;
  }
 
-/*
-#sports{
-  float: right;
-}*/
+.loadHidden {
+  display: none;
+}
 
 #triviaMovies{
   top:87%;

@@ -1,8 +1,7 @@
 var Box = (function () {
 
   function loadAboutText(element, textBox){
-    element.contents().fadeIn("slow");
-    // element.fadeIn(textBox);
+    element.contents().fadeIn(3000);
   }
 
   function unloadAboutText(element){
