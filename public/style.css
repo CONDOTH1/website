@@ -150,7 +150,7 @@ body{
 
 #quote{
   position:relative;
-  width: 500px;
+  width: 520px;
   height: 200px;
   top: 40%;
   left: 0%;
@@ -174,11 +174,11 @@ body{
   display: none;
 }
 
-#triviaMovies{
+#triviaBjj{
   top:87%;
 }
 
-#triviaSport{
+#triviaMuayThai{
   top:87%;
 }
 

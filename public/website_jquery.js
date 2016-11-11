@@ -1,12 +1,12 @@
 $(document).ready(function(){
 
-  var boxDivs = {home: $("#photoFrame"), about: $("#aboutTextBox"), contact: $('#contactTextBox'), sports: $('#triviaSport'), movies: $('#triviaMovies')};
+  var boxDivs = {home: $("#photoFrame"), about: $("#aboutTextBox"), contact: $('#contactTextBox'), muayThai: $('#triviaMuayThai'), bjj: $('#triviaBjj')};
 
-  var boxText = {home: "./lib/erb/photo.erb", about: "./lib/erb/about.erb", contact: "./lib/erb/contact.erb", sports: "./lib/erb/sports.erb", movies: "./lib/erb/movies.erb"};
+  var boxText = {home: "./lib/erb/photo.erb", about: "./lib/erb/about.erb", contact: "./lib/erb/contact.erb", muayThai: "./lib/erb/muayThai.erb", bjj: "./lib/erb/bjj.erb"};
 
-  var openBoxes = {home: true, about: false, contact: false, sports: false, movies: false};
+  var openBoxes = {home: true, about: false, contact: false, muayThai: false, bjj: false};
 
-  var boxPosition = {home: "83%", about: "95%", contact: "91%", sports: "87%", movies: "87%"};
+  var boxPosition = {home: "83%", about: "95%", contact: "91%", muayThai: "87%", bjj: "87%"};
 
   var homePositions = {width: 220, height: 220, padding: "+=0"};
   var aboutPositions = {width: 900, height: 490, padding: "+=30"};
@@ -34,15 +34,15 @@ $(document).ready(function(){
     }
   });
 
-  $('#sports').click(function(){
+  $('#muayThai').click(function(){
     if (animationNotRunning()) {
-      openBox("sports", triviaPositions);
+      openBox("muayThai", triviaPositions);
     }
   });
 
-  $('#movies').click(function(){
+  $('#bjj').click(function(){
     if (animationNotRunning()) {
-      openBox("movies", triviaPositions);
+      openBox("bjj", triviaPositions);
     }
   });
 
