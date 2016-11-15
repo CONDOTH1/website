@@ -1,12 +1,12 @@
 $(document).ready(function(){
 
-  var boxDivs = {home: $("#photoFrame"), about: $("#aboutTextBox"), contact: $('#contactTextBox'), muayThai: $('#triviaMuayThai'), bjj: $('#triviaBjj')};
+  var boxDivs = {home: $("#photoFrame"), about: $("#aboutTextBox"), contact: $('#contactTextBox'), muayThai: $('#triviaMuayThai'), bjj: $('#triviaBjj'), travel: $('#triviaTravel')};
 
-  var boxText = {home: "./lib/erb/photo.erb", about: "./lib/erb/about.erb", contact: "./lib/erb/contact.erb", muayThai: "./lib/erb/muayThai.erb", bjj: "./lib/erb/bjj.erb"};
+  var boxText = {home: "./lib/erb/photo.erb", about: "./lib/erb/about.erb", contact: "./lib/erb/contact.erb", muayThai: "./lib/erb/muayThai.erb", bjj: "./lib/erb/bjj.erb", travel: "./lib/erb/travel.erb"};
 
-  var openBoxes = {home: true, about: false, contact: false, muayThai: false, bjj: false};
+  var openBoxes = {home: true, about: false, contact: false, muayThai: false, bjj: false, travel: false};
 
-  var boxPosition = {home: "83%", about: "95%", contact: "91%", muayThai: "87%", bjj: "87%"};
+  var boxPosition = {home: "83%", about: "95%", contact: "91%", muayThai: "87%", bjj: "87%", travel: "87%"};
 
   var homePositions = {width: 220, height: 220, padding: "+=0"};
   var aboutPositions = {width: 900, height: 490, padding: "+=30"};
@@ -43,6 +43,13 @@ $(document).ready(function(){
   $('#bjj').click(function(){
     if (animationNotRunning()) {
       openBox("bjj", triviaPositions);
+    }
+  });
+
+  $('#travel').click(function(){
+    if (animationNotRunning()) {
+      console.log('test');
+      openBox("travel", triviaPositions);
     }
   });
 
