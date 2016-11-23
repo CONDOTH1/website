@@ -123,11 +123,15 @@ body{
 }
 
 #aboutTextBox{
-  top:95%;
+  top:87%;
 }
 
 #contactTextBox{
-  top:91%;
+  top:83%;
+}
+
+#portfolioBox{
+  top:95%;
 }
 
 #photoFrame{
@@ -135,7 +139,7 @@ body{
   overflow-y:scroll;
   margin: auto;
   left:1%;*/
-  top:83%;
+  top:79%;
   /*width: 20px;
   height: 20px;
   background: #b3c8d0;
@@ -176,15 +180,15 @@ body{
 }
 
 #triviaBjj{
-  top:87%;
+  top:91%;
 }
 
 #triviaMuayThai{
-  top:87%;
+  top:91%;
 }
 
 #triviaTravel{
-  top:87%;
+  top:91%;
 }
 
 /*img{
@@ -245,4 +249,87 @@ span{
 
 ::selection{
   background: black;
+}
+
+.cl-effect-14 a {
+  padding: 0 20px;
+  height: 45px;
+  line-height: 45px;
+}
+
+nav a {
+  position: relative;
+  display: inline-block;
+  margin: 15px 25px;
+  outline: none;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(255, 255,255, 0.3);
+  font-size: 1.35em;
+  text-align: center;
+}
+
+*:after, *::before {
+  box-sizing: border-box;
+}
+
+.cl-effect-14 a::before {
+  top: 0;
+  left: 0;
+  transform: rotate(90deg);
+  transform-origin: 0 0;
+}
+
+.cl-effect-14 a::before, cl-effect-14 a::after {
+  position: absolute;
+  width: 45px;
+  height: 2px;
+  background: #fff;
+  content: '';
+  opacity: 0.2;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+.cl-effect-14 a::after {
+  right: 0;
+  bottom: 0;
+  transform: rotate(90deg);
+  transform-origin: 100% 0;
+}
+
+.cl-effect-14 a::before, .cl-effect-14 a::after{
+  position: absolute;
+  width: 45px;
+  height: 2px;
+  background: #fff;
+  content: '';
+  opacity: 0.2;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+nav a:hover {
+  outline: none;
+}
+
+.cl-effect-14 a:hover::before{
+  left: 50%;
+  transform: rotate(0deg) translateX(-50%);
+}
+
+.cl-effect-14 a:hover::before, .cl-effect-14 a:hover::after {
+  opacity: 1;
+}
+
+.cl-effect-14 a:hover::after {
+  right: 50%;
+  transform: rotate(0deg) translateX(50%);
+}
+
+.cl-effect-14 a:hover::before, .cl-effect-14 a:hover::after {
+  opacity: 1;
 }

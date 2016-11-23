@@ -1,17 +1,19 @@
 $(document).ready(function(){
 
-  var boxDivs = {home: $("#photoFrame"), about: $("#aboutTextBox"), contact: $('#contactTextBox'), muayThai: $('#triviaMuayThai'), bjj: $('#triviaBjj'), travel: $('#triviaTravel')};
+  var boxDivs = {home: $("#photoFrame"), about: $("#aboutTextBox"), contact: $('#contactTextBox'), muayThai: $('#triviaMuayThai'), bjj: $('#triviaBjj'), travel: $('#triviaTravel'), portfolio: $('#portfolioBox')};
 
-  var boxText = {home: "./lib/erb/photo.erb", about: "./lib/erb/about.erb", contact: "./lib/erb/contact.erb", muayThai: "./lib/erb/muayThai.erb", bjj: "./lib/erb/bjj.erb", travel: "./lib/erb/travel.erb"};
+  var boxText = {home: "./lib/erb/photo.erb", about: "./lib/erb/about.erb", contact: "./lib/erb/contact.erb", muayThai: "./lib/erb/muayThai.erb", bjj: "./lib/erb/bjj.erb", travel: "./lib/erb/travel.erb", portfolio: "./lib/erb/portfolio.erb"};
 
-  var openBoxes = {home: true, about: false, contact: false, muayThai: false, bjj: false, travel: false};
+  var openBoxes = {home: true, about: false, contact: false, muayThai: false, bjj: false, travel: false, portfolio: false};
 
-  var boxPosition = {home: "83%", about: "95%", contact: "91%", muayThai: "87%", bjj: "87%", travel: "87%"};
+  var boxPosition = {home: "79%", about: "87%", contact: "83%", muayThai: "91%", bjj: "91%", travel: "91%", portfolio: "95%"};
 
-  var homePositions = {width: 220, height: 220, padding: "+=0"};
-  var aboutPositions = {width: 900, height: 490, padding: "+=30"};
+  var homePositions = {width: '20em', height: '20em', padding: "+=0"};
+  var aboutPositions = {width: '80%', height: '70%', padding: "+=30"};
   var contactPositions = {width: 400, height: 200, padding: "+=30"};
-  var triviaPositions = {width: 900, height: 490, padding: "+=30"};
+  var triviaPositions = {width: '80%', height: '70%', padding: "+=30"};
+  var portfolioPositions = {width: '80%', height: '70%', padding: "+=30"};
+
 
   websiteStartAnimation();
 
@@ -48,8 +50,13 @@ $(document).ready(function(){
 
   $('#travel').click(function(){
     if (animationNotRunning()) {
-      console.log('test');
       openBox("travel", triviaPositions);
+    }
+  });
+
+  $('#portfolio').click(function(){
+    if (animationNotRunning()) {
+      openBox("portfolio", portfolioPositions);
     }
   });
 
@@ -76,7 +83,7 @@ $(document).ready(function(){
   function websiteStartAnimation(){
     $("#photoFrame").animate({top: "20%"}, 500)
       .animate({right: "0%"}, 500)
-      .animate({width: 220, height: 220}, 500)
+      .animate({width: '20em', height: '20em'}, 500)
       .animate({borderWidth: 5}, "slow");
     $("#photoFrame").load("./lib/erb/photo.erb");
     loadQuote();
