@@ -262,7 +262,7 @@ nav a {
   display: inline-block;
   margin: 15px 25px;
   outline: none;
-  color: #fff;
+  color: #000;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -287,7 +287,7 @@ nav a {
   position: absolute;
   width: 45px;
   height: 2px;
-  background: #fff;
+  background: #000;
   content: '';
   opacity: 0.2;
   transition: all 0.3s;
@@ -305,7 +305,7 @@ nav a {
   position: absolute;
   width: 45px;
   height: 2px;
-  background: #fff;
+  background: #000;
   content: '';
   opacity: 0.2;
   transition: all 0.3s;
@@ -332,4 +332,17 @@ nav a:hover {
 
 .cl-effect-14 a:hover::before, .cl-effect-14 a:hover::after {
   opacity: 1;
+}
+
+.portfolioAll {
+    display: inline-block;
+}
+
+.portfolioIndividual {
+    width: 100%;
+    height: 50%;
+    margin: 10%;
+    border: 3px solid white;
+    text-align: center;
+    word-wrap: break-word;
 }
