@@ -17,7 +17,7 @@ var Box = (function () {
 
     animateForward: function(element, textBox, positions) {
       element.animate({right: "92%"}, 200)
-      .animate({top: "18%"}, 500)
+      .animate({top: positions.top}, 500)
       .animate({right: "0%"}, 500)
       .animate({width: positions.width}, 500)
       .animate({height: positions.height}, 200)

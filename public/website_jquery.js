@@ -8,11 +8,11 @@ $(document).ready(function(){
 
   var boxPosition = {home: "79%", about: "87%", contact: "83%", muayThai: "91%", bjj: "91%", travel: "91%", portfolio: "95%"};
 
-  var homePositions = {width: '20em', height: '20em', padding: "+=0"};
-  var aboutPositions = {width: '80%', height: '70%', padding: "+=30"};
-  var contactPositions = {width: 400, height: 200, padding: "+=30"};
-  var triviaPositions = {width: '80%', height: '70%', padding: "+=30"};
-  var portfolioPositions = {width: '80%', height: '70%', padding: "+=30"};
+  var homePositions = {width: '20em', height: '20em', padding: "+=0", top: "25%"};
+  var aboutPositions = {width: '80%', height: '70%', padding: "+=30", top: "18%"};
+  var contactPositions = {width: 400, height: 200, padding: "+=30",top: "25%"};
+  var triviaPositions = {width: '80%', height: '70%', padding: "+=30",top: "18%"};
+  var portfolioPositions = {width: '80%', height: '60%', padding: "+=30", top: "25%"};
 
 
   websiteStartAnimation();
@@ -81,7 +81,7 @@ $(document).ready(function(){
   }
 
   function websiteStartAnimation(){
-    $("#photoFrame").animate({top: "20%"}, 500)
+    $("#photoFrame").animate({top: "25%"}, 500)
       .animate({right: "0%"}, 500)
       .animate({width: '20em', height: '20em'}, 500)
       .animate({borderWidth: 5}, "slow");
