@@ -253,8 +253,8 @@ span{
 
 .cl-effect-14 a {
   padding: 0 20px;
-  height: 45px;
-  line-height: 45px;
+  height: 30px;
+  line-height: 30px;
 }
 
 nav a {
@@ -268,7 +268,7 @@ nav a {
   letter-spacing: 1px;
   font-weight: 400;
   text-shadow: 0 0 1px rgba(255, 255,255, 0.3);
-  font-size: 1.35em;
+  font-size: 0.7em;
   text-align: center;
 }
 
@@ -285,7 +285,7 @@ nav a {
 
 .cl-effect-14 a::before, cl-effect-14 a::after {
   position: absolute;
-  width: 45px;
+  width: 30px;
   height: 2px;
   background: #000;
   content: '';
@@ -303,7 +303,7 @@ nav a {
 
 .cl-effect-14 a::before, .cl-effect-14 a::after{
   position: absolute;
-  width: 45px;
+  width: 30px;
   height: 2px;
   background: #000;
   content: '';
