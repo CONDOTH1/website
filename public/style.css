@@ -252,15 +252,15 @@ span{
 }
 
 .cl-effect-14 a {
-  padding: 0 20px;
-  height: 30px;
-  line-height: 30px;
+  padding: 0 10px;
+  height: 20px;
+  line-height: 23px;
 }
 
 nav a {
   position: relative;
   display: inline-block;
-  margin: 15px 25px;
+  margin: 25px 5px;
   outline: none;
   color: #000;
   text-decoration: none;
@@ -285,7 +285,7 @@ nav a {
 
 .cl-effect-14 a::before, cl-effect-14 a::after {
   position: absolute;
-  width: 30px;
+  width: 20px;
   height: 2px;
   background: #000;
   content: '';
@@ -296,14 +296,14 @@ nav a {
 
 .cl-effect-14 a::after {
   right: 0;
-  bottom: 0;
+  bottom: -2;
   transform: rotate(90deg);
   transform-origin: 100% 0;
 }
 
 .cl-effect-14 a::before, .cl-effect-14 a::after{
   position: absolute;
-  width: 30px;
+  width: 20px;
   height: 2px;
   background: #000;
   content: '';
@@ -338,15 +338,25 @@ nav a:hover {
     display: inline-block;
 }
 
+/*#viewCode {
+  margin: 0px;
+}*/
+
+#cl-effect-14 {
+  display: inline-block;
+  position: relative;
+}
+
 .portfolioIndividual {
-    width: 150px;
-    height: 200px;
-    margin: 10%;
+    width: 25%;
+    height: 40%;
+    margin: 5% 10% 2% 0%;
     border: 3px solid white;
     padding: 5px;
     text-align: center;
     word-wrap: break-word;
     background-color: black;
+    position: relative;
 }
 
 .portfolioIndividual {
@@ -366,4 +376,11 @@ nav a:hover {
 
 #newsSum:hover{
   opacity: 1;
+}
+
+.linkBoxNews{
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  margin: auto;
 }
