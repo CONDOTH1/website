@@ -16,7 +16,7 @@ var Box = (function () {
     },
 
     animateForward: function(element, textBox, positions) {
-      element.animate({right: "92%"}, 200)
+      element.animate({right: "90%"}, 200)
       .animate({top: positions.top}, 500)
       .animate({right: "0%"}, 500)
       .animate({width: positions.width}, 500)
@@ -31,7 +31,7 @@ var Box = (function () {
         .animate({padding: 0})
         .animate({height: 20}, 200)
         .animate({width: 20}, 500)
-        .animate({right: "92%"}, 500)
+        .animate({right: "90%"}, 500)
         .animate({top: position}, 500)
         .animate({right: "99%"}, 200);
         unloadAboutText(element);

@@ -101,10 +101,7 @@ body{
 }
 
 /*#titleName{
-  color: white;
-  text-decoration: none;
-  position: center;
-  margin: auto;
+  background: #b3c8d0;
 }*/
 
 .movingBox{
@@ -114,7 +111,7 @@ body{
   left:1%;
   width: 20px;
   height: 20px;
-  background: #b3c8d0;
+  /*background: #b3c8d0;*/
   border: 1px solid white;
   font-size: 10pt;
   color: black;
@@ -124,14 +121,21 @@ body{
 
 #aboutTextBox{
   top:87%;
+  /*background-color:#8fa0a6;*/
+  background-color:#6b787c;
+
 }
 
 #contactTextBox{
   top:83%;
+  /*background-color: #a1b4bb;*/
+  background-color:#8fa0a6;
 }
 
 #portfolioBox{
   top:95%;
+  /*background-color:#6b787c;*/
+  background-color:#232829;
 }
 
 #photoFrame{
@@ -140,6 +144,7 @@ body{
   margin: auto;
   left:1%;*/
   top:79%;
+  background-color: #b3c8d0;
   /*width: 20px;
   height: 20px;
   background: #b3c8d0;
@@ -181,14 +186,20 @@ body{
 
 #triviaBjj{
   top:91%;
+  /*background-color:#7d8c91;*/
+  background-color: #475053;
 }
 
 #triviaMuayThai{
   top:91%;
+  /*background-color:#7d8c91;*/
+  background-color: #475053;
 }
 
 #triviaTravel{
   top:91%;
+  /*background-color:#7d8c91;*/
+  background-color: #475053;
 }
 
 /*img{
@@ -262,7 +273,7 @@ nav a {
   display: inline-block;
   margin: 25px 5px;
   outline: none;
-  color: #000;
+  color: white;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -287,7 +298,7 @@ nav a {
   position: absolute;
   width: 20px;
   height: 2px;
-  background: #000;
+  background: white;
   content: '';
   opacity: 0.2;
   transition: all 0.3s;
@@ -305,7 +316,7 @@ nav a {
   position: absolute;
   width: 20px;
   height: 2px;
-  background: #000;
+  background: white;
   content: '';
   opacity: 0.2;
   transition: all 0.3s;
@@ -336,6 +347,7 @@ nav a:hover {
 
 .portfolioAll {
     display: inline-block;
+    margin-top: 5%;
 }
 
 /*#viewCode {
@@ -350,13 +362,14 @@ nav a:hover {
 .portfolioIndividual {
     width: 25%;
     height: 40%;
-    margin: 5% 10% 2% 0%;
+    /*margin: 5% 5% 2% 0%;*/
     border: 3px solid white;
     padding: 5px;
     text-align: center;
     word-wrap: break-word;
     background-color: black;
     position: relative;
+    display: inline-block;
 }
 
 .portfolioIndividual {
@@ -378,9 +391,59 @@ nav a:hover {
   opacity: 1;
 }
 
+#newSummary{
+  float: left;
+}
+
+#audioDrive{
+  float: right;
+}
+
+#instagram{
+  left: 10%;
+  /*margin: 0 auto;*/
+}
+
 .linkBoxNews{
   position: absolute;
   width: 100%;
   top: 100%;
   margin: auto;
+  left: -1
+}
+
+#insta {
+  color: white;
+  opacity: .2;
+  transition: opacity .9s ease-in-out;
+}
+
+#insta:hover{
+  opacity: 1;
+}
+
+.linkBoxInstagram{
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  margin: auto;
+  left: -1
+}
+
+#audio{
+  color: white;
+  opacity: .2;
+  transition: opacity .9s ease-in-out;
+}
+
+#audio:hover{
+  opacity: 1;
+}
+
+.linkBoxAudioDrive{
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  margin: auto;
+  left: -1
 }
